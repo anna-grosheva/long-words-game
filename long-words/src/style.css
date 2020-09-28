@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada&family=Raleway:wght@100;200;300;400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    margin: 5%;
+    padding: 2% 0;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+
+.header {
+    text-align: center;
+}
+
+.header__heading {
+    font-family: 'Montserrat Subrayada', sans-serif;
+    color: #404040;
+}
+
+.header__slogan {
+    font-family: 'Raleway', sans-serif;
+    color: grey;
+}
+
+.header__wordfield {
+    margin: 50px 0;
+}
+
+.header__input {
+    height: 30px;
+    width: 280px;
+    font-size: 25px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid grey;
+    outline: none;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.header__button {
+    width: 90px;
+    height: 34px;
+    border-radius: 17px;
+    border: none;
+    color: white;
+    background-color: grey;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.header__button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.header__button:disabled {
+    cursor: default;
+    opacity: 0.4;
+}
+
+.blocks {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 60px 10px;
+}
+
+.playerblock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    box-sizing: border-box;
+    width: 250px;
+    height: 250px;
+}
+
+.playerblock__button {
+    height: 36px;
+    border-radius: 20px;
+    border: none;
+    margin: 10px 0;
+    padding: 0 20px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+.playerblock__button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.nextround-button {
+    margin: 0 calc((100% - 150px)/2) 30px;
+    width: 150px;
+    height: 38px;
+    border-radius: 19px;
+    border: none;
+    color: white;
+    background-color: #404040;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.red-block {
+    background-color: #FFF1F1;
+}
+
+.green-block {
+    background-color: #F1FFF4;
+}
+
+.red-score {
+    color: #ac3535;
+    font-family: 'Raleway', sans-serif;
+    font-size: 45px;
+    margin: 30px 0;
+}
+
+.green-score {
+    color: #4a8352;
+    font-family: 'Raleway', sans-serif;
+    font-size: 45px;
+    margin: 30px 0;
+}
+
+.red-buttons {
+    background-color: #ac3535;
+}
+
+.green-buttons {
+    background-color: #4a8352;
+}
