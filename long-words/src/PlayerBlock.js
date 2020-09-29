@@ -3,12 +3,19 @@ import './style.css';
 
 class PlayerBlock extends Component {
   render() {
-    const { classBlock, classScore, classButton, scores } = this.props;
+    const { classBlock, classScore, classButton, scores, notSelected, giveUp } = this.props;
     return (
-      <div className={"playerblock " + classBlock}>
+      <div className={"playerblock " + classBlock + ' ' + notSelected}>
         <p className={classScore}>{scores}</p>
-        <button className={"playerblock__button " + classButton}>Give up</button>
-        <button className={"playerblock__button " + classButton}>Check the word</button>
+        <button 
+          className={"playerblock__button " + classButton} 
+          disabled={notSelected ? true : false}
+          onClick={giveUp}
+          >Give up</button>
+        <button 
+          className={"playerblock__button " + classButton} 
+          disabled={notSelected ? true : false}
+          >Check the word</button>
       </div>
     );
   }
