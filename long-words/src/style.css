@@ -27,7 +27,22 @@ body {
 }
 
 .header__wordfield {
-    margin: 50px 0;
+    margin: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header__correct {
+    color: green;
+    font-size: 30px;
+    margin: 0;
+}
+
+.header__wrong {
+    color: red;
+    font-size: 30px;
+    margin: 0;
 }
 
 .header__input {
@@ -104,7 +119,7 @@ body {
     opacity: 0.4;
 }
 
-.draw {
+.final-message {
     font-family: 'Raleway', sans-serif;
     color: #404040;
     text-align: center;
@@ -161,4 +176,23 @@ body {
 
 .not-selected {
     opacity: 0.4;
+}
+
+.red-color {
+    color: #ac3535;
+}
+
+.green-color {
+    color: #4a8352;
+}
+
+.yandex {
+    font-family: 'Raleway', sans-serif;
+    color: grey;
+    text-align: right;
+    padding-right: 40px;
+}
+
+.yandex__link {
+    color: #404040;
 }
