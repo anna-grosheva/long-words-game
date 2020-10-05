@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './style.css';
 import PlayerBlock from './PlayerBlock';
+import Manual from './Manual';
 
 class App extends Component {
   state = {
@@ -83,6 +84,7 @@ class App extends Component {
     return (
       <div className="app">
         <div className="header">
+          <Manual />
           <h1 className="header__heading">LONG WORDS</h1>
           <p className="header__slogan">Score points by putting letters one by one</p>
           <div className="header__wordfield">

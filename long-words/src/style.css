@@ -196,3 +196,19 @@ body {
 .yandex__link {
     color: #404040;
 }
+
+.how-to-button {
+    height: 30px;
+    width: 100px;
+    border-radius: 17px;
+    border: 1px solid lightgray;
+    color: gray;
+    background-color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+.how-to-button:hover {
+    background-color: #E9E9E9;
+    border: none;
+    cursor: pointer;
+}
