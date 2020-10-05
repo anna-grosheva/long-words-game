@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import './style.css';
 import PlayerBlock from './PlayerBlock';
+import io from 'socket.io-client';
+
+const socket = io();
 
 class App extends Component {
   state = {
@@ -16,6 +19,11 @@ class App extends Component {
 
   changeInput = (event) => {
     this.setState({ word: event.target.value.replace(/[^A-Za-z]/, '') });
+    socket.emit('letter-added', { letter: this.state.word } )
+  }
+
+  changeInputByAnotherUser = (letter) => {
+    this.setState({ word: this.state.word + letter });
   }
 
   getRandomLetter = () => {
@@ -25,6 +33,9 @@ class App extends Component {
 
   componentDidMount() {
     this.getRandomLetter();
+    socket.on('letter-is-added', data => {
+      this.changeInputByAnotherUser(data.letter);
+    })
   }
 
   changeWhichIsActive = () => {
