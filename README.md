@@ -15,11 +15,18 @@ Player2: L U C H (in mind: LUNCH)
 Player1: L U C H E (in mind: LUNCHEON)
 etc.
 ```
-The aim is to type the longest word you can recall in order to get more points.
-If at any point of the game one of the players (Player1) doesn’t know any existing word with a written letter combination, he/she clicks “Give up” and another player (Player2) takes turn.
+7. The aim is to type the longest word you can recall in order to get more points.
+
+8. If at any point of the game one of the players (Player1) doesn’t know any existing word with a written letter combination, he/she clicks “Give up” and another player (Player2) takes turn.
+
 After it Player2 has a chance to type fully the word he/she has in mind and check it in the dictionary (the button “Check the word”):
+
 **a)** if the word exists (the green check mark appears), Player2 wins and gets as much points as letters in the checked word;
+
 **b)** if there’s no such word in the dictionary (the red cross appears), Player1 wins instead and gets all points.
-If both players give up one by one, then it’s a draw and none of them get points.
-Click “Next Round” to start a new round.
-The player who has more points starts the new round.
+
+9. If both players give up one by one, then it’s a draw and none of them get points.
+
+10. Click “Next Round” to start a new round.
+
+11. The player who has more points starts the new round.
