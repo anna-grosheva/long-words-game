@@ -83,8 +83,8 @@ class App extends Component {
     const { scoresRed, scoresGreen, word, whichIsActive, giveUps, inputLength, ifWordExists, finalState } = this.state;
     return (
       <div className="app">
+        <Manual />
         <div className="header">
-          <Manual />
           <h1 className="header__heading">LONG WORDS</h1>
           <p className="header__slogan">Score points by putting letters one by one</p>
           <div className="header__wordfield">

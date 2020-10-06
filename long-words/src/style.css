@@ -14,6 +14,8 @@ body {
 
 .header {
     text-align: center;
+    clear: both;
+    margin-top: 50px;
 }
 
 .header__heading {
@@ -202,13 +204,71 @@ body {
     width: 100px;
     border-radius: 17px;
     border: 1px solid lightgray;
+    outline: none;
     color: gray;
     background-color: white;
     font-family: 'Raleway', sans-serif;
+    float: right;
+    margin-right: 20px;
 }
 
 .how-to-button:hover {
     background-color: #E9E9E9;
     border: none;
     cursor: pointer;
+}
+
+.manual {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 100px;
+}
+
+.invisible {
+    display: none;
+}
+
+.manual__content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    overflow: scroll;
+    background-color: white;
+    border-radius: 5px;
+    width: 70%;
+    height: 50%;
+    padding-top: 10px;
+    margin: auto;
+}
+
+.manual__text {
+    width: 80%;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.manual__text li {
+    margin-bottom: 10px;
+    padding-left: 7px;
+}
+
+.manual__close {
+    font-size: 20px;
+    font-weight: bold;
+    color: grey;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.manual__close:hover {
+    color: #404040;
+    cursor: pointer; 
 }
