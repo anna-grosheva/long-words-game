@@ -46,7 +46,11 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: rgba(0,0,0,0.4);
-    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .invisible {
@@ -60,8 +64,8 @@ body {
     overflow: scroll;
     background-color: white;
     border-radius: 5px;
-    width: 70%;
-    height: 50%;
+    max-width: 600px;
+    height: 80%;
     padding-top: 10px;
     margin: auto;
 }
