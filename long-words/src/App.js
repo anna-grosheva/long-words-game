@@ -53,6 +53,11 @@ class App extends Component {
     }
   }
 
+  newGameHandler = () => {
+    this.getRandomLetter();
+    this.setState({ scoresRed: 0, scoresGreen: 0, whichIsActive: 'red', giveUps: 0, inputLength: 1, finalState: false, ifWordExists: '' });
+  }
+
   checkWord = (word) => {
     const { whichIsActive, scoresRed, scoresGreen } = this.state;
     fetch(`https://dictionary.yandex.net/api/v1/dicservice.json/lookup?key=dict.1.1.20200930T073609Z.78822774b8132738.c148d7698da51b2165b444c78c2c8ffb9d84a4b8&lang=en-ru&text=${word}`)
@@ -121,7 +126,11 @@ class App extends Component {
         </div>
         {finalState ? <div>{(whichIsActive === 'red' && ifWordExists === 'yes') || (whichIsActive === 'green' && ifWordExists === 'no') ? <p className="final-message red-color">THE RED WON!</p> : <p className="final-message green-color">THE GREEN WON!</p>}</div> : null}
         {giveUps === 2 ? <p className="final-message">IT'S A DRAW!</p> : null}
-        {giveUps === 2 || finalState ? <button className="nextround-button" onClick={this.nextRoundHandler}>Next Round</button> : null}
+        {giveUps === 2 || finalState ? 
+          <div className="final-buttons">
+            <button className="nextround-button" onClick={this.nextRoundHandler}>Next Round</button>
+            <button className="nextround-button" onClick={this.newGameHandler}>New Game</button>
+          </div> : null}
         <p className="yandex">Powered by <a href="https://tech.yandex.com/dictionary/" target="_blank" rel="noopener noreferrer" className="yandex__link">Yandex.Dictionary</a></p>
       </div>
     );
