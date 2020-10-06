@@ -111,6 +111,7 @@ class App extends Component {
             notSelected={whichIsActive === 'red' && giveUps !== 2 ? null : "not-selected"}
             giveUp={this.playerGivesUp}
             checkWord={() => this.checkWord(word)}
+            checkWordDisabled={giveUps > 0 ? "not-selected" : null}
             />
           <PlayerBlock 
             classBlock="green-block"
@@ -120,6 +121,7 @@ class App extends Component {
             notSelected={whichIsActive === 'green' && giveUps !== 2 ? null : "not-selected"}
             giveUp={this.playerGivesUp}
             checkWord={() => this.checkWord(word)}
+            checkWordDisabled={giveUps > 0 ? "not-selected" : null}
             />
         </div>
         {finalState ? <div>{(whichIsActive === 'red' && ifWordExists === 'yes') || (whichIsActive === 'green' && ifWordExists === 'no') ? <p className="final-message red-color">THE RED WON!</p> : <p className="final-message green-color">THE GREEN WON!</p>}</div> : null}
