@@ -29,12 +29,8 @@ class App extends Component {
   }
 
   changeWhichIsActive = () => {
-    this.setState({ inputLength: this.state.inputLength + 1 })
-    if (this.state.whichIsActive === 'red') {
-      this.setState({ whichIsActive: 'green' });
-    } else {
-      this.setState({ whichIsActive: 'red' });
-    }
+    let whichIsActive = this.state.whichIsActive === 'red' ? 'green' : 'red';
+    this.setState({ whichIsActive: whichIsActive, inputLength: this.state.inputLength + 1 });
   }
 
   playerGivesUp = () => {
@@ -63,21 +59,23 @@ class App extends Component {
     fetch(`https://dictionary.yandex.net/api/v1/dicservice.json/lookup?key=dict.1.1.20200930T073609Z.78822774b8132738.c148d7698da51b2165b444c78c2c8ffb9d84a4b8&lang=en-ru&text=${word}`)
     .then(res => res.json())
     .then(data => {
+      const state = { finalState: true }
       if (data.def.length > 0) {
-        this.setState({ ifWordExists: 'yes', finalState: true });
+        state.ifWordExists = 'yes';
         if (whichIsActive === 'red') {
-          this.setState({ scoresRed: scoresRed + word.length });
+          state.scoresRed = scoresRed + word.length;
         } else {
-          this.setState({ scoresGreen: scoresGreen + word.length });
+          state.scoresGreen = scoresGreen + word.length;
         }
       } else {
-        this.setState({ ifWordExists: 'no', finalState: true });
+        state.ifWordExists = 'no';
         if (whichIsActive === 'red') {
-          this.setState({ scoresGreen: scoresGreen + word.length });
+          state.scoresGreen = scoresGreen + word.length;
         } else {
-          this.setState({ scoresRed: scoresRed + word.length });
+          state.scoresRed = scoresRed + word.length;
         }
       }
+      this.setState(state);
     })
     .catch(err => {
       console.log(err);
