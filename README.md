@@ -1,68 +1,25 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Long Words Game
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## How to play
+1. Two players try to type an existing long English word putting letters one by one to the line. The first letter is randomly defined.
+2. At every step of the game players must know what word they have in mind.
+3. Each player can put only one letter at once in any place: before, after or between the written letters.
+4. It can be any letter of the planned word: let’s say, if there’s PR in the line and the player thinks about the word PRODUCTION, so it’s not necessary to put O next, moreover, it’s recommended to use any other letters of the word to make the game for your rival harder (PRU for example).
+5. After putting a new letter, the player clicks “Submit” to pass the game to another player.
+6. Players take turns and add letters. For example:
+```
+Player1: H (in mind: HOT)
+Player2: U H (in mind: PUSH)
+Player1: U C H (in mind: PUNCH)
+Player2: L U C H (in mind: LUNCH)
+Player1: L U C H E (in mind: LUNCHEON)
+etc.
+```
+The aim is to type the longest word you can recall in order to get more points.
+If at any point of the game one of the players (Player1) doesn’t know any existing word with a written letter combination, he/she clicks “Give up” and another player (Player2) takes turn.
+After it Player2 has a chance to type fully the word he/she has in mind and check it in the dictionary (the button “Check the word”):
+**a)** if the word exists (the green check mark appears), Player2 wins and gets as much points as letters in the checked word;
+**b)** if there’s no such word in the dictionary (the red cross appears), Player1 wins instead and gets all points.
+If both players give up one by one, then it’s a draw and none of them get points.
+Click “Next Round” to start a new round.
+The player who has more points starts the new round.
